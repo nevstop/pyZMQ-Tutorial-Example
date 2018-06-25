@@ -7,6 +7,8 @@ context = zmq.Context()
 
 subscriber = context.socket(zmq.SUB)
 subscriber.connect("tcp://localhost:5556")
+# IPC is not supported on windows
+# subscriber.connect("ipc://weather.ipc")
 
 argc = len(sys.argv)
 

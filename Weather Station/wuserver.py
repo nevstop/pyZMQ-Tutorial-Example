@@ -6,7 +6,8 @@ context = zmq.Context()
 publisher = context.socket(zmq.PUB)
 
 publisher.bind("tcp://*:5556")
-#publisher.bind("ipc://weather.ipc")
+# IPC is not supported on windows
+# publisher.bind("ipc://weather.ipc")
 
 while True:
     zipcode = random.randint(0,100000)
