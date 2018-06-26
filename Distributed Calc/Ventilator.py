@@ -14,7 +14,6 @@ sender.bind("tcp://*:5557")
 sink = context.socket(zmq.PUSH)
 sink.connect("tcp://127.0.0.1:5558")
 
-print "Any key down after worker is ready"
 raw_input("Any key down after worker is ready")
 
 sink.send('0')
@@ -24,10 +23,10 @@ task_num = 50
 total_msec = 0
 
 for i in range(0, task_num):
-    workload = random.randint(0,100) + 1
+    workload = 50 # ms random.randint(0,100) + 1
     total_msec += workload
     print 'workload: %d ms' % workload
-    sender.send(str(total_msec))
+    sender.send(str(workload))
 
 print 'Estimated time: %d ms' % total_msec
 
