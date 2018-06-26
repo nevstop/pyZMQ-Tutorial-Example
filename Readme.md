@@ -20,4 +20,5 @@ ZMQ（ØMQ、ZeroMQ, 0MQ）
 
  1. "Hello world": 使用 REQ-REP 模式，演示 ZMQ 如何工作。
  2. "Weather Station": 使用气象站范例，演示如何使用 Publish-Subscribe 模式，建立单向数据分发。
-
+ 3. "REQ-REP": 使用 REQ-REP 模式，演示 1-N ZMQ 模型
+ 4. "Distributed Calc": 使用 PUSH-Pull 模式，演示分布式负载均衡计算
